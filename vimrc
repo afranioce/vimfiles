@@ -239,7 +239,7 @@ if has("gui_running")
     endif
 
     if has("gui_mac") || has("gui_macvim")
-        set guifont=Menlo:h14
+        set guifont=Menlo:h12
         " key binding for Command-T to behave properly
         " uncomment to replace the Mac Command-T key to Command-T plugin
         "macmenu &File.New\ Tab key=<nop>
@@ -443,22 +443,22 @@ inoremap <Esc>C <right>
 inoremap <Esc>D <left>
 
 " phpqa
-nnoremap   <Leader>qa  phpqa
-nnoremap   <Leader>qc  phpqa
+nnoremap <Leader>qa  phpqa
+nnoremap <Leader>qc  phpqa
 
 " let g:phpqa_messdetector_ruleset = "/path/to/phpmd.xml"
 
 " Set the codesniffer args (default = "--standard=PHPCS")
 " let g:phpqa_codesniffer_args = "--standard=Zend"
 
-PHP executable (default = "php")
+" PHP executable (default = php)
 let g:phpqa_php_cmd='/usr/local/zend/bin/php'
 
 " PHP Code Sniffer binary (default = "phpcs")
 let g:phpqa_codesniffer_cmd='/usr/local/zend/bin/phpcs'
 
 " PHP Mess Detector binary (default = "phpmd")
-let g:phpqa_messdetector_cmd='/usr/local/zend/bin/phpmd'
+" let g:phpqa_messdetector_cmd='/usr/local/zend/bin/phpmd'
 
 " Don't run messdetector on save (default = 1)
 " let g:phpqa_messdetector_autorun = 0
@@ -472,7 +472,7 @@ let g:phpqa_messdetector_cmd='/usr/local/zend/bin/phpmd'
 " let g:phpqa_codecoverage_file = "/path/to/clover.xml"
 
 "Destacar palavra sob o cursor
-nmap <s-f> :let @/="<C-r><C-w>"<CR>
+nmap <s-f> :let @/=">"<CR>
 
 "Procura a proxima segunrando *
 autocmd cursormoved * set hlsearch
