@@ -441,3 +441,35 @@ inoremap <Esc>A <up>
 inoremap <Esc>B <down>
 inoremap <Esc>C <right>
 inoremap <Esc>D <left>
+
+" phpqa
+nnoremap   <Leader>qa  phpqa
+nnoremap   <Leader>qc  phpqa
+
+" let g:phpqa_messdetector_ruleset = "/path/to/phpmd.xml"
+
+" Set the codesniffer args (default = "--standard=PHPCS")
+" let g:phpqa_codesniffer_args = "--standard=Zend"
+
+PHP executable (default = "php")
+let g:phpqa_php_cmd='/usr/local/zend/bin/php'
+
+" PHP Code Sniffer binary (default = "phpcs")
+let g:phpqa_codesniffer_cmd='/usr/local/zend/bin/phpcs'
+
+" PHP Mess Detector binary (default = "phpmd")
+let g:phpqa_messdetector_cmd='/usr/local/zend/bin/phpmd'
+
+" Don't run messdetector on save (default = 1)
+" let g:phpqa_messdetector_autorun = 0
+
+" Don't run codesniffer on save (default = 1)
+" let g:phpqa_codesniffer_autorun = 0
+
+" Show code coverage on load (default = 0)
+" let g:phpqa_codecoverage_autorun = 1
+
+" let g:phpqa_codecoverage_file = "/path/to/clover.xml"
+
+"Destacar palavra sob o cursor
+nmap <s-f> :let @/="<C-r><C-w>"<CR>
