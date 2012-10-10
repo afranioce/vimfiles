@@ -473,3 +473,7 @@ let g:phpqa_messdetector_cmd='/usr/local/zend/bin/phpmd'
 
 "Destacar palavra sob o cursor
 nmap <s-f> :let @/="<C-r><C-w>"<CR>
+
+"Procura a proxima segunrando *
+autocmd cursormoved * set hlsearch
+
